@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best IAS Coaching in Delhi. Join Avyan IAS Academy for comprehensive UPSC preparation, GS foundation, and expert mentorship by Surendra Kumar.">
+    <title>IAS Coaching in Delhi | UPSC Preparation | Avyan IAS Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .course-layout { display: grid; grid-template-columns: 1fr 360px; gap: 40px; align-items: start; }
+        .course-sidebar { position: sticky; top: 100px; }
+        .sidebar-card { background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 1px solid var(--glass-border); overflow: hidden; margin-bottom: 24px; }
+        .sidebar-card-header { background: var(--primary-blue); color: white; padding: 18px 24px; font-weight: 700; font-size: 1rem; }
+        .sidebar-card-body { padding: 24px; }
+        .course-fee-box { background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark)); color: white; border-radius: var(--radius-lg); padding: 30px; text-align: center; margin-bottom: 24px; }
+        .course-fee-box .fee-label { font-size: 0.85rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 1px; }
+        .course-fee-box .fee-amount { font-size: 2.5rem; font-weight: 800; color: var(--accent-orange); }
+        .content-section { margin-bottom: 40px; }
+        .content-section h2 { font-size: 1.6rem; color: var(--primary-blue); border-left: 4px solid var(--accent-orange); padding-left: 16px; margin-bottom: 16px; }
+        .content-section h3 { font-size: 1.2rem; color: var(--primary-blue); margin-bottom: 12px; margin-top: 24px; }
+        .content-section p { color: var(--text-dark); line-height: 1.85; margin-bottom: 14px; }
+        .content-section ul { list-style: none; margin-bottom: 16px; }
+        .content-section ul li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; color: var(--text-dark); line-height: 1.6; }
+        .content-section ul li::before { content: "✓"; color: var(--accent-orange); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+        .batch-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        .batch-table td { padding: 10px 14px; border: 1px solid var(--glass-border); font-size: 0.95rem; }
+        .batch-table td:first-child { background: rgba(10, 61, 98, 0.04); font-weight: 600; color: var(--primary-blue); width: 45%; }
+        .yt-preview { display: block; position: relative; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); text-decoration: none; margin-bottom: 16px; }
+        .yt-preview img { width: 100%; display: block; }
+        .yt-preview .overlay { position: absolute; inset: 0; background: rgba(10,61,98,0.5); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+        .yt-play-btn { width: 52px; height: 52px; background: #FF0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(255,0,0,0.5); }
+        @media (max-width: 1024px) { .course-layout { grid-template-columns: 1fr; } .course-sidebar { position: static; } }
+    </style>
+</head>
+<body>
+
+    <header class="header scrolled" id="header" style="background: var(--primary-white); border-bottom: 1px solid var(--glass-border);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Avyan<span>IAS</span></a>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <div class="nav-dropdown">
+                    <a href="syllabus.html" class="nav-link dropdown-toggle">Syllabus <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="syllabus.html#upsc-prelims">UPSC Prelims</a>
+                        <a href="syllabus.html#upsc-mains">UPSC Mains</a>
+                        <a href="syllabus.html#ugc-net">UGC NET</a>
+                        <a href="syllabus.html#csir-net">CSIR NET</a>
+                        <a href="syllabus.html#nda">NDA Syllabus</a>
+                    </div>
+                </div>
+                <a href="courses.html" class="nav-link active">Programs</a>
+                <a href="admission.html" class="nav-link">Admission</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="section" style="background: linear-gradient(135deg, #0A3D62 0%, #052136 100%); padding-top: 150px; padding-bottom: 60px; color: white; overflow: hidden; position: relative;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 750px;">
+                <h1 style="font-size: 3rem; margin-bottom: 16px; color: white;">Best <span style="color: var(--accent-orange);">IAS Coaching</span> in Delhi</h1>
+                <p style="font-size: 1.15rem; opacity: 0.88; margin-bottom: 28px; line-height: 1.7;">Led by Mr. Surendra Kumar, Avyan IAS Academy offers comprehensive preparation for UPSC Civil Services. Online, Offline & Live classes available at South Extension, Delhi.</p>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                    <a href="admission.html" class="btn btn-primary">Enroll Now</a>
+                    <a href="#course-details" class="btn btn-secondary" style="color: white; border-color: white;">View Course Details</a>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; right: -5%; bottom: -10%; opacity: 0.06; font-size: 14rem; color: white; font-weight: 800; pointer-events: none;">UPSC</div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section" id="course-details">
+        <div class="container">
+            <div class="course-layout">
+
+                <!-- LEFT: Main Article Content -->
+                <div>
+                    <div class="content-section animate-on-scroll">
+                        <h2>IAS Coaching Centre in Delhi</h2>
+                        <p>Avyan IAS Coaching in Delhi is a reputed coaching centre offering top-quality training for aspiring civil servants. Led by the visionary Mr. Surendra Kumar, our dynamic training method has helped many IAS aspirants achieve their goals. Our IAS courses are designed to help IAS aspirants prepare well and crack the exam on their first attempt. Our courses and curriculum are designed by our dedicated team at Avyan IAS Academy in Delhi. Their efforts and our top training facilities make us the best IAS coaching centre in Delhi.</p>
+                        <p>So, whether you're preparing for IAS/IPS/IFS or any other civil service exams, our academy is here to help you achieve your dreams. Enrol in our IAS classes – be it an IAS online class, offline class or our IAS live classes. Choose the best preparation method at your convenience to get guidance from experts.</p>
+                        <p>We at Avyan, IAS coaching institute in Delhi, understand the journey to selection is complex and hard. However, we are here to help you. We'll help you take your 1st Step towards IAS preparation with our rigorous training programme. Our IAS course focuses on building a solid foundation that will help you ace the UPSC Civil Services examination with flying colours.</p>
+                    </div>
+
+                    <div class="content-section animate-on-scroll">
+                        <h2>Course Benefits</h2>
+                        <ul>
+                            <li>General Studies (Prelims cum Mains) + CSAT</li>
+                            <li>17 GS + 1 CSAT Book Material</li>
+                            <li>20+ All India Prelims &amp; Mains Test Series</li>
+                            <li>Weekly Current Affair Updates</li>
+                            <li>Hand-written Personality Test Preparation Notes</li>
+                            <li>Medical Science Crash Course</li>
+                            <li>Weekly Test (every Wednesday/Friday)</li>
+                            <li>Essay Writing Preparation for Mains</li>
+                            <li>One-time Fee &amp; Classes till Selection</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section animate-on-scroll">
+                        <h2>Avyan SouthX Center Batch Timings</h2>
+                        <table class="batch-table">
+                            <tr><td>Weekdays – Morning Batch</td><td>09:00 AM to 11:00 AM</td></tr>
+                            <tr><td>Weekdays – Evening Batch</td><td>05:00 PM to 10:00 PM</td></tr>
+                            <tr><td>Saturday</td><td>3:00 PM to 08:00 PM</td></tr>
+                            <tr><td>Sunday</td><td>09:00 AM to 08:00 PM</td></tr>
+                            <tr><td>Office Hours</td><td>10:00 AM – 8:00 PM (Mon–Sun)</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="content-section animate-on-scroll">
+                        <h2>Choose from Our IAS Online / Offline Course</h2>
+                        <p>At Avyan IAS Coaching Centre in Delhi, we offer the best courses for IAS preparations. Students can select from our online, offline, and live courses as per their choice. Our packages are designed to suit your budget and cater to your needs as a student. That's not all. We also have faculties who will guide you in accessing quality training. Their personal attention, encouragement, and support will guide them to crack the IAS easily.</p>
+                        <p>At Avyan, we have years of experience under our belt and have given excellent results. It's the reason why we're trusted by thousands of students as 1st choice for IAS preparations. Choose from our IAS courses per your preparation level, and begin your journey to success.</p>
+
+                        <h3>Online IAS Course</h3>
+                        <p>We understand that clearing the IAS exam is a challenging task. We offer a convenient online platform for you to study at your convenience. Whether you're preparing for the civil service exam or IAS, our classes will adapt easily to your preparation schedule.</p>
+                        <ul>
+                            <li>One-on-one Discussions</li>
+                            <li>IAS Tailored Curriculum</li>
+                            <li>Real-time Doubt Clearing Sessions</li>
+                            <li>Pre-recorded Lectures</li>
+                            <li>Prior Monthly Schedule</li>
+                            <li>Study Material + Daily CA Updates</li>
+                            <li><strong>Fee: ₹25,000/-</strong></li>
+                        </ul>
+
+                        <h3>Offline IAS Course</h3>
+                        <p>Our offline IAS classes will help you understand complex concepts deeply and develop your critical thinking skills. You'll be able to clarify doubts instantly, deepen your understanding of complex topics, and exchange ideas with your peers.</p>
+                        <ul>
+                            <li>Well-equipped Classroom</li>
+                            <li>Curriculum Tailored to IAS Preparation</li>
+                            <li>Highly Experienced Faculties</li>
+                            <li>Face-to-face Interaction</li>
+                            <li>Newspaper &amp; Monthly Magazine</li>
+                            <li>Study Material + Daily CA Updates</li>
+                            <li><strong>Fee: ₹30,000/-</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section animate-on-scroll">
+                        <h2>Avyan IAS Live Class — Learn from the Comfort of Your Home</h2>
+                        <p>Preparing for the UPSC exam alone is one of the most challenging tasks. It requires dedication, commitment, and hard work. But, if there's a helping hand to help you with your IAS preparations, it's easy to focus more on preparations and get good results. And, if you can get this help from the comfort of your home — nothing is better than this.</p>
+                        <p>At Avyan IAS Academy in Delhi, we provide interactive classroom training facilities to our students through Live Classes. With this, students can study smarter and collaborate with other students for better preparation. It's easy to receive in-depth feedback on assignments and customized study material. Our dedicated faculty is available to guide you at every step of the way with live online sessions.</p>
+
+                        <h3>Benefits of Our IAS Live Classes</h3>
+                        <ul>
+                            <li>General Studies (Prelims cum Mains) + CSAT Preparations</li>
+                            <li>Interactive Live Classes for Real-time Learning</li>
+                            <li>Comprehensive &amp; Well-structured Curriculum</li>
+                            <li>SMEs (Subject Matter Experts), with 15+ Years of Experience</li>
+                            <li>Lecture Recording Facility for Anytime Learning</li>
+                            <li>Individualized Attention &amp; Guidance for Better Preparation</li>
+                            <li>Daily Current Affairs for Up-to-date Information</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section animate-on-scroll">
+                        <h2>Study Material &amp; Test Series</h2>
+                        <ul>
+                            <li>Exam Oriented Study Materials (Course wise for Foundation + Integrated Programme)</li>
+                            <li>17 GS + 1 CSAT Book materials with contents from Best Authors</li>
+                            <li>Personalised Notes from Faculties &amp; Experts (Hand-written/Printed) given before classes commence</li>
+                            <li>Weekly Current Affairs updates (provided every Saturday/Sunday)</li>
+                            <li>Monthly Schedule given to students for suitable planning</li>
+                            <li>All India Prelims &amp; Mains Test Series – 20+ Tests for both Prelims &amp; Mains with rankings</li>
+                            <li>Weekly Test (1 Hr Duration) on portions covered — every Wednesday/Friday</li>
+                            <li>Newspapers – The Hindu, Indian Express and monthly magazines (available for study at the centre)</li>
+                            <li>100+ books needed for the UPSC exam available at the centre</li>
+                            <li>Printer provided to make copies</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section animate-on-scroll">
+                        <h2>Enrol Today – Best IAS Coaching Centre in Delhi</h2>
+                        <p>Getting first rank in IAS exams is more than just a one-size-fits-all business. Every individual needs guidance as per their preparation levels. At Avyan, we understand the unique needs of candidates aiming to get first rank. We have been providing top-class civil services coaching in Delhi since our inception. Its credit goes to our dedicated faculty at Avyan IAS coaching centre in Delhi.</p>
+                        <p>Our faculties are passionate about assisting students to become IAS officers. Being the best UPSC coaching in Delhi, we ensure that students are well-equipped for the civil services exam. So, what are you waiting for? Enrol in the best IAS coaching in Delhi and take the first step towards fulfilling your dreams of becoming an IAS.</p>
+                        <p><strong>Note:</strong> At Avyan IAS Academy, students need access to the best learning environment, the best teachers, and the best learning materials to help our students succeed fast. We provide quality research study materials, offline courses, live courses and various tests to help you achieve a good result in your exams.</p>
+                        <a href="admission.html" class="btn btn-primary" style="margin-top: 10px;">Enroll in IAS Program</a>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Sidebar -->
+                <div class="course-sidebar">
+
+                    <!-- Fee Box -->
+                    <div class="course-fee-box animate-on-scroll">
+                        <div class="fee-label">Integrated + Foundation</div>
+                        <div class="fee-amount">₹85,000</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8; margin: 8px 0 20px;">One-time Fee | Classes till Selection</div>
+                        <a href="admission.html" class="btn btn-primary" style="width: 100%; justify-content: center;">Enroll Now</a>
+                    </div>
+
+                    <!-- YouTube Preview -->
+                    <div class="sidebar-card animate-on-scroll">
+                        <div class="sidebar-card-header"><i class="fab fa-youtube" style="color: #FF0000; margin-right: 8px;"></i>Watch IAS Lectures on YouTube</div>
+                        <div class="sidebar-card-body">
+                            <a class="yt-preview" href="https://www.youtube.com/@avyanias/videos" target="_blank">
+                                <img src="https://img.youtube.com/vi/R9_W7_mN10U/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/R9_W7_mN10U/hqdefault.jpg'" alt="IAS Lecture">
+                                <div class="overlay">
+                                    <div class="yt-play-btn"><i class="fas fa-play" style="color: white; font-size: 1.2rem; margin-left: 3px;"></i></div>
+                                    <span style="color: white; font-weight: 600; font-size: 0.85rem;">Watch on YouTube</span>
+                                </div>
+                            </a>
+                            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-light);">
+                                <span><i class="fab fa-youtube" style="color: #FF0000; margin-right: 4px;"></i>10.4K+ Subscribers</span>
+                                <a href="https://www.youtube.com/@avyanias" target="_blank" class="btn btn-primary" style="background: #FF0000; border-color: #FF0000; padding: 6px 14px; font-size: 0.8rem;">Subscribe</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- App Download -->
+                    <div class="sidebar-card animate-on-scroll">
+                        <div class="sidebar-card-header"><i class="fas fa-mobile-alt" style="margin-right: 8px;"></i>Download Avyan App</div>
+                        <div class="sidebar-card-body">
+                            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 16px;">Access live classes, recordings, study material & mock tests anytime on your phone.</p>
+                            <a href="https://play.google.com/store/apps/details?id=co.andrea.eteuu" target="_blank">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height: 44px;">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Info -->
+                    <div class="sidebar-card animate-on-scroll">
+                        <div class="sidebar-card-header"><i class="fas fa-info-circle" style="margin-right: 8px;"></i>Course Quick Info</div>
+                        <div class="sidebar-card-body" style="padding: 0;">
+                            <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                                <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 12px 18px; color: var(--text-light);">Mode</td><td style="padding: 12px 18px; font-weight: 600;">Online / Offline / Live</td></tr>
+                                <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 12px 18px; color: var(--text-light);">Duration</td><td style="padding: 12px 18px; font-weight: 600;">Till Selection</td></tr>
+                                <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 12px 18px; color: var(--text-light);">Medium</td><td style="padding: 12px 18px; font-weight: 600;">Hindi &amp; English</td></tr>
+                                <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 12px 18px; color: var(--text-light);">Director</td><td style="padding: 12px 18px; font-weight: 600;">Surendra Kumar</td></tr>
+                                <tr><td style="padding: 12px 18px; color: var(--text-light);">Contact</td><td style="padding: 12px 18px; font-weight: 600;">+91-9667877734</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="section" style="background: rgba(10, 61, 98, 0.02);">
+        <div class="container">
+            <div class="split-layout">
+                <div class="animate-on-scroll">
+                    <h2 class="section-title" style="text-align: left;">Visit Our <span>Delhi Center</span></h2>
+                    <p style="color: var(--text-light); margin-bottom: 30px;">Located at South Extension — easily accessible via the Pink Line Metro (South Extension Station, Gate 2 &amp; 4).</p>
+                    <table class="location-table">
+                        <tr><td class="location-label">Academy Name</td><td class="location-value">Avyan IAS Academy</td></tr>
+                        <tr><td class="location-label">Official Address</td><td class="location-value">Gate No. 2, Pink Line Metro, South Extension, F-21, 2nd Floor, Near McDonald, South Extension Part-1, New Delhi – 110049</td></tr>
+                        <tr><td class="location-label">Office Timing</td><td class="location-value">10:00 AM – 08:00 PM (Monday – Sunday)</td></tr>
+                        <tr><td class="location-label">Phone Numbers</td><td class="location-value">+91-9667877734 | 011-43027121 | 8860907664</td></tr>
+                        <tr><td class="location-label">Email</td><td class="location-value">contact@avyaniasacademy.com</td></tr>
+                    </table>
+                </div>
+                <div class="animate-on-scroll">
+                    <div class="video-container" style="padding-bottom: 75%; border: 1px solid var(--glass-border);">
+                        <iframe src="https://maps.google.com/maps?q=Avyan%20IAS%20Academy,%20South%20Extension%20Part-1,%20Delhi&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Avyan<span>IAS</span></div>
+                    <p class="footer-about">Avyan IAS Academy is a leading name in the education industry, providing quality education and guidance to UPSC (IAS/IPS/IFS) aspirants across the country.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/avyanias1" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/avyanias" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC-pvnarBwMw1gX-aNHdfmBA" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=918826081539" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Classes</h4>
+                    <ul class="footer-links">
+                        <li><a href="ias-coaching.html">IAS / UPSC</a></li>
+                        <li><a href="ugc-net-coaching.html">UGC NET Coaching</a></li>
+                        <li><a href="nda-coaching.html">NDA Coaching</a></li>
+                        <li><a href="csir-net-coaching.html">CSIR-NET Coaching</a></li>
+                        <li><a href="syllabus.html#bpsc">BPSC Syllabus</a></li>
+                        <li><a href="syllabus.html#mppsc">MPPSC Syllabus</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Academic Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="ncert-books.html">NCERT Digital Library</a></li>
+                        <li><a href="syllabus.html">Official Syllabus Hub</a></li>
+                        <li><a href="current-affairs.html">Daily Current Affairs</a></li>
+                        <li><a href="previous-years-papers.html">Previous Years Papers</a></li>
+                        <li><a href="live-class.html">Live Classes</a></li>
+                        <li><a href="blog.html">Blog &amp; Updates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Academy &amp; Legal</h4>
+                    <ul class="footer-contact">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="admission.html">Admission Form</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="about.html#approach">Our Approach</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-info-row" style="margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div>
+                    <h4 class="footer-heading" style="font-size: 1rem; margin-bottom: 15px;">Official Address</h4>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6;"><i class="fas fa-map-marker-alt" style="color: var(--accent-orange); margin-right: 10px;"></i> F-21 2nd Floor, Near McDonald, South Extension Part-1, Delhi-110049. Nearest Metro Gate No. 2,4</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading" style="font-size: 1rem; margin-bottom: 15px;">Phone &amp; Email</h4>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;"><i class="fas fa-phone-alt" style="color: var(--accent-orange); margin-right: 10px;"></i> +91 9667877734 / 011-43027121</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 10px;"><i class="fas fa-envelope" style="color: var(--accent-orange); margin-right: 10px;"></i> contact@avyaniasacademy.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2024 Avyan IAS Academy. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

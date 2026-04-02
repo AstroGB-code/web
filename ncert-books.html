@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download NCERT Books for UPSC preparation at Avyan IAS Academy. Essential resources for building a strong foundation in UPSC exams.">
+    <title>NCERT Books Library | Avyan IAS Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .ncert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .ncert-card {
+            padding: 30px;
+            transition: var(--transition);
+        }
+        .ncert-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-orange);
+        }
+        .ncert-card i {
+            font-size: 2.5rem;
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+        }
+        .book-list {
+            margin-top: 15px;
+            list-style: none;
+        }
+        .book-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .book-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-orange);
+        }
+        .book-list a {
+            color: var(--accent-orange);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .book-list a:hover {
+            color: var(--accent-orange);
+            padding-left: 5px;
+        }
+        .subject-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(255, 126, 0, 0.1);
+            color: var(--accent-orange);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header scrolled" id="header" style="background: var(--primary-white); border-bottom: 1px solid var(--glass-border);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                Avyan<span>IAS</span>
+            </a>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="courses.html" class="nav-link">Programs</a>
+                <a href="syllabus.html" class="nav-link">Syllabus</a>
+                <a href="admission.html" class="nav-link">Admission</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--primary-white) 100%); padding-top: 150px; padding-bottom: 50px;">
+        <div class="container text-center animate-on-scroll">
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">NCERT Digital Library</h1>
+            <p class="section-subtitle">Download essential NCERT textbooks to build your foundation for UPSC, BPSC, and other civil services exams.</p>
+        </div>
+    </section>
+
+    <!-- Libary Section -->
+    <section class="section">
+        <div class="container">
+            <div class="ncert-grid">
+                <!-- History -->
+                <div class="glass-panel ncert-card animate-on-scroll">
+                    <span class="subject-badge">9 Books</span>
+                    <i class="fas fa-landmark"></i>
+                    <h3>History</h3>
+                    <ul class="book-list">
+                        <li><a href="https://avyaniasacademy.com/wp-content/uploads/2022/09/History6.pdf" target="_blank">Class 6 - Our Pasts I</a></li>
+                        <li><a href="https://avyaniasacademy.com/wp-content/uploads/2022/09/Copy-of-our-past-class-7-social-science.pdf" target="_blank">Class 7 - Our Pasts II</a></li>
+                        <li><a href="https://avyaniasacademy.com/wp-content/uploads/2022/09/OUR-PAST-PART-2-CLASS-8-SOCIAL-SCIENCE.pdf" target="_blank">Class 8 - Our Pasts III</a></li>
+                        <li><a href="https://avyaniasacademy.com/wp-content/uploads/2022/09/NCERT-Class-12-History-Part-1-1.pdf" target="_blank">Class 12 Themes Part 1</a></li>
+                        <li><a href="https://avyaniasacademy.com/wp-content/uploads/2022/09/NCERT-Class-12-History-Part-2.pdf" target="_blank">Class 12 Themes Part 2</a></li>
+                    </ul>
+                </div>
+
+                <!-- Geography -->
+                <div class="glass-panel ncert-card animate-on-scroll" style="transition-delay: 0.1s">
+                    <span class="subject-badge">10 Books</span>
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>Geography</h3>
+                    <ul class="book-list">
+                        <li><a href="#">Class 6 - The Earth Our Habitat</a></li>
+                        <li><a href="#">Class 7 - Our Environment</a></li>
+                        <li><a href="#">Class 8 - Resource & Development</a></li>
+                        <li><a href="#">Class 11 - Physical Geography</a></li>
+                        <li><a href="#">Class 12 - Human Geography</a></li>
+                    </ul>
+                </div>
+
+                <!-- Political Science -->
+                <div class="glass-panel ncert-card animate-on-scroll" style="transition-delay: 0.2s">
+                    <span class="subject-badge">9 Books</span>
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Polity</h3>
+                    <ul class="book-list">
+                        <li><a href="#">Social & Political Life I</a></li>
+                        <li><a href="#">Social & Political Life II</a></li>
+                        <li><a href="#">Democratic Politics I</a></li>
+                        <li><a href="#">Indian Constitution at Work</a></li>
+                        <li><a href="#">Political Theory</a></li>
+                    </ul>
+                </div>
+
+                <!-- Economics -->
+                <div class="glass-panel ncert-card animate-on-scroll">
+                    <span class="subject-badge">5 Books</span>
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Economics</h3>
+                    <ul class="book-list">
+                        <li><a href="#">Class 9 - Economics</a></li>
+                        <li><a href="#">Class 10 - Understanding Economic Dev.</a></li>
+                        <li><a href="#">Class 11 - Indian Economic Dev.</a></li>
+                        <li><a href="#">Class 12 - Introductory Micro</a></li>
+                        <li><a href="#">Class 12 - Introductory Macro</a></li>
+                    </ul>
+                </div>
+
+                <!-- Science -->
+                <div class="glass-panel ncert-card animate-on-scroll" style="transition-delay: 0.1s">
+                    <span class="subject-badge">7 Books</span>
+                    <i class="fas fa-microscope"></i>
+                    <h3>Science</h3>
+                    <ul class="book-list">
+                        <li><a href="#">Class 6-8 Integrated Science</a></li>
+                        <li><a href="#">Class 9 Science Fundamentals</a></li>
+                        <li><a href="#">Class 10 Advanced Science</a></li>
+                        <li><a href="#">Class 12 Biology (Selected Units)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Art & Culture -->
+                <div class="glass-panel ncert-card animate-on-scroll" style="transition-delay: 0.2s">
+                    <span class="subject-badge">3 Books</span>
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Art & Culture</h3>
+                    <ul class="book-list">
+                        <li><a href="#">An Introduction to Indian Art</a></li>
+                        <li><a href="#">Living Craft Traditions of India</a></li>
+                        <li><a href="#">Crafts of India</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section animate-on-scroll">
+        <div class="container">
+            <h2>Need a Guided Preparation Plan?</h2>
+            <p>Our mentors help you navigate the vast NCERT library to pick exactly what matters for your exam.</p>
+            <a href="admission.html" class="btn btn-white">Join Foundation Batch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        Avyan<span>IAS</span>
+                    </div>
+                    <p class="footer-about">Avyan IAS Academy is a leading name in the education industry, providing quality education and guidance to UPSC (IAS/IPS/IFS) aspirants across the country.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/avyanias1" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/avyanias" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC-pvnarBwMw1gX-aNHdfmBA" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=918826081539" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Classes</h4>
+                    <ul class="footer-links">
+                        <li><a href="ias-coaching.html">IAS / UPSC</a></li>
+                        <li><a href="ugc-net-coaching.html">UGC NET Coaching</a></li>
+                        <li><a href="nda-coaching.html">NDA Coaching</a></li>
+                        <li><a href="csir-net-coaching.html">CSIR-NET Coaching</a></li>
+                        <li><a href="syllabus.html#bpsc">BPSC Syllabus</a></li>
+                        <li><a href="syllabus.html#mppsc">MPPSC Syllabus</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Academic Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="ncert-books.html">NCERT Digital Library</a></li>
+                        <li><a href="syllabus.html">Official Syllabus Hub</a></li>
+                        <li><a href="current-affairs.html">Daily Current Affairs</a></li>
+                        <li><a href="previous-years-papers.html">Previous Years Papers</a></li>
+                        <li><a href="live-class.html">AVYAN IAS STORE</a></li>
+                        <li><a href="blog.html">Blog & Updates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Academy & Legal</h4>
+                    <ul class="footer-contact">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="admission.html">Admission Form</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="about.html#approach">Our Approach</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-info-row" style="margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="footer-contact-item">
+                    <h4 class="footer-heading" style="font-size: 1rem; margin-bottom: 15px;">Official Address</h4>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6;"><i class="fas fa-map-marker-alt" style="color: var(--accent-orange); margin-right: 10px;"></i> F-21 2nd Floor, Near McDonald, South Extension Part-1, Delhi-110049. Nearest Metro Gate No. 2,4</p>
+                </div>
+                <div class="footer-contact-item">
+                    <h4 class="footer-heading" style="font-size: 1rem; margin-bottom: 15px;">Phone & Email</h4>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;"><i class="fas fa-phone-alt" style="color: var(--accent-orange); margin-right: 10px;"></i> +91 9667877734 / 01143027121</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 10px;"><i class="fas fa-envelope" style="color: var(--accent-orange); margin-right: 10px;"></i> contact@avyaniasacademy.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Avyan IAS Academy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

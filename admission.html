@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Avyan IAS Academy. Fill out our online admission form to start your journey toward becoming a civil servant.">
+    <title>Admission Form | Avyan IAS Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        .admission-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 10px rgba(255,107,0,0.1);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10,61,98,0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .thank-you-modal {
+            background: var(--primary-white);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            max-width: 500px;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-lg);
+        }
+        .modal-overlay.active .thank-you-modal {
+            transform: scale(1);
+        }
+        .success-icon {
+            font-size: 4rem;
+            color: #2ecc71;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header scrolled" id="header" style="background: var(--primary-white); border-bottom: 1px solid var(--glass-border);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                Avyan<span>IAS</span>
+            </a>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="courses.html" class="nav-link">Programs</a>
+                <a href="fee-structure.html" class="nav-link">Pricing</a>
+                <a href="admission.html" class="nav-link" style="color: var(--accent-orange); border-bottom: 2px solid var(--accent-orange);">Admission</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section" style="background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--primary-white) 100%); padding-top: 150px; padding-bottom: 50px;">
+        <div class="container text-center animate-on-scroll">
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Start Your <span>Journey</span></h1>
+            <p class="section-subtitle" style="font-size: 1.25rem;">Our inclusive approach regardless of educational background ensures you get the support you need.</p>
+        </div>
+    </section>
+
+    <!-- Admission Form Section -->
+    <section class="section">
+        <div class="container">
+            <div class="glass-panel admission-form-container animate-on-scroll">
+                <h2 style="margin-bottom: 30px; text-align: center; color: var(--primary-blue);">Admission Application</h2>
+                <form id="admissionForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Name of Candidate Mr./Ms. *</label>
+                            <input type="text" id="fullName" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course Applied For *</label>
+                            <select id="course" required>
+                                <option value="" disabled selected>Select a program</option>
+                                <option value="upsc">UPSC Civil Services (Integrated)</option>
+                                <option value="ugc-net">UGC NET / JRF</option>
+                                <option value="csir-net">CSIR-NET Science</option>
+                                <option value="nda">NDA / NA Entrance</option>
+                                <option value="bpsc">BPSC (Bihar PCS)</option>
+                                <option value="mppsc">MPPSC (MP PCS)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="motherName">Mother's Name Mrs. *</label>
+                            <input type="text" id="motherName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name Mr. *</label>
+                            <input type="text" id="fatherName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dob">Date Of Birth *</label>
+                            <input type="date" id="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category *</label>
+                            <input type="text" id="category" placeholder="General/OBC/SC/ST" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="marital">Marital Status *</label>
+                            <select id="marital" required>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone/Mob No *</label>
+                            <input type="tel" id="phone" placeholder="+91" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address *</label>
+                        <textarea id="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastExam">Last Exam Passed *</label>
+                        <input type="text" id="lastExam" required>
+                    </div>
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px;">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="thank-you-modal">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h2 style="color: var(--primary-blue); margin-bottom: 15px;">Application Received!</h2>
+            <p style="color: var(--text-light); margin-bottom: 30px; line-height: 1.6;">Thank you for choosing Avyan IAS Academy. Your details have been securely saved to our database. Our admissions counselor will contact you within 24-48 hours.</p>
+            <button onclick="closeModal()" class="btn btn-primary">Close Window</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        Avyan<span>IAS</span>
+                    </div>
+                    <p class="footer-about">Avyan IAS Academy is a leading name in the education industry, providing quality education and guidance to UPSC (IAS/IPS/IFS) aspirants across the country.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/avyanias1" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/avyanias" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UC-pvnarBwMw1gX-aNHdfmBA" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=918826081539" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Classes</h4>
+                    <ul class="footer-links">
+                        <li><a href="ias-coaching.html">IAS / UPSC</a></li>
+                        <li><a href="ugc-net-coaching.html">UGC NET Coaching</a></li>
+                        <li><a href="nda-coaching.html">NDA Coaching</a></li>
+                        <li><a href="csir-net-coaching.html">CSIR-NET Coaching</a></li>
+                        <li><a href="syllabus.html#bpsc">BPSC Syllabus</a></li>
+                        <li><a href="syllabus.html#mppsc">MPPSC Syllabus</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Academic Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="ncert-books.html">NCERT Digital Library</a></li>
+                        <li><a href="syllabus.html">Official Syllabus Hub</a></li>
+                        <li><a href="current-affairs.html">Daily Current Affairs</a></li>
+                        <li><a href="previous-years-papers.html">Previous Years Papers</a></li>
+                        <li><a href="live-class.html">AVYAN IAS STORE</a></li>
+                        <li><a href="blog.html">Blog & Updates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Academy & Legal</h4>
+                    <ul class="footer-contact">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="admission.html">Admission Form</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                        <li><a href="about.html#approach">Our Approach</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-info-row" style="margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="footer-contact-item">
+                    <h4 class="footer-heading" style="font-size: 1rem; margin-bottom: 15px;">Official Address</h4>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 1.6;"><i class="fas fa-map-marker-alt" style="color: var(--accent-orange); margin-right: 10px;"></i> F-21 2nd Floor, Near McDonald, South Extension Part-1, Delhi-110049. Nearest Metro Gate No. 2,4</p>
+                </div>
+                <div class="footer-contact-item">
+                    <h4 class="footer-heading" style="font-size: 1rem; margin-bottom: 15px;">Phone & Email</h4>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;"><i class="fas fa-phone-alt" style="color: var(--accent-orange); margin-right: 10px;"></i> +91 9667877734 / 01143027121</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 10px;"><i class="fas fa-envelope" style="color: var(--accent-orange); margin-right: 10px;"></i> contact@avyaniasacademy.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="currentYear"></span> Avyan IAS Academy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/supabase-config.js"></script>
+    <script>
+        const admissionForm = document.getElementById('admissionForm');
+        const modalOverlay = document.getElementById('modalOverlay');
+
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            admissionForm.reset();
+        }
+
+        admissionForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get button for loading state
+            const submitBtn = admissionForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = "Submitting...";
+            submitBtn.disabled = true;
+
+            // Collect form data
+            const formData = {
+                full_name: document.getElementById('fullName').value,
+                course: document.getElementById('course').value,
+                mother_name: document.getElementById('motherName').value,
+                father_name: document.getElementById('fatherName').value,
+                dob: document.getElementById('dob').value,
+                category: document.getElementById('category').value,
+                marital_status: document.getElementById('marital').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                last_exam: document.getElementById('lastExam').value
+            };
+
+            try {
+                const { data, error } = await supabaseClient
+                    .from('admissions')
+                    .insert([formData]);
+
+                if (error) throw error;
+
+                // Show Modal on success
+                modalOverlay.classList.add('active');
+            } catch (err) {
+                console.error('Error submitting form:', err.message);
+                alert('An error occurred during submission. Please try again later.');
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
